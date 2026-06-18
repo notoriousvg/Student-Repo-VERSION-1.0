@@ -21,6 +21,12 @@ int main()
 {
 
     testMMAP();
+    Student me("Victor", "Computer Science", "Data Science", 3.02, 101);
+    Student* ptr_me = &me;
+    std::cout << ptr_me << std::endl;
+    ptr_me->setStudentName("Alfonso");
+
+    std::cout << "Changed the name throguh the pointer\n" << ptr_me << std::endl;
     // char userInput = 'n';
     // int menuSection = 0;
     // do 
@@ -49,6 +55,10 @@ int main()
     //         break;
     //     }
     // }while(userInput != 'Y');
+    ptr_me = nullptr;
+    
+    std::cout << ptr_me;
+    delete ptr_me;
     return 0;
 }
 void testMMAP()

@@ -10,7 +10,9 @@ class Student
         std::string _minor;
         float _gpa;
         int _id;
-
+        Student* _me;
+        // useful when modifying informatoin through auxilary methods
+  
     public:
         //CSTORS
         Student();                                           // EMPTY
@@ -18,7 +20,7 @@ class Student
         Student(std::string& s, int& id);                    // NAME, ID
         Student(const std::string& s, const std::string& major,          // FULL RECORD
                 const std::string& minor, const float& gpa, const int id);
-
+        
         Student& operator=(const Student& other);
         //Accessors
         std::string getName() const;
@@ -27,11 +29,11 @@ class Student
         float getGPA() const;
         int getID() const;
         //Modifiers 
-        void setStudentName(std::string& s);
-        void setMajor(std::string& s);
-        void setMinor(std::string& s);
-        void setGPA(float& x);
-        void setID(int& x);
+        void setStudentName(const std::string& s);
+        void setMajor(const std::string& s);
+        void setMinor(const std::string& s);
+        void setGPA(const float& x);
+        void setID(const int& x);
         void copy(const Student& other);
         void update(const std::string& s, int code);              // code(1) = major, code(0) = minor
         void update(const float& f);
@@ -39,6 +41,7 @@ class Student
         friend bool operator==(const Student& lhs, const Student& rhs);
         //Friend Functions
         friend std::ostream& operator<<(std::ostream& outs, const Student& s);
+        friend std::ostream& operator<<(std::ostream& outs, const Student* s);
         
 };
 

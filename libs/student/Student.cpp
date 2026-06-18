@@ -2,16 +2,16 @@
 #include <iostream>
 
 Student::Student() : _studentName("NONE"), _major("NONE"),
-                    _minor("NONE"), _gpa(-1), _id(-1) {}
+                    _minor("NONE"), _gpa(-1), _id(-1), _me(this) {}
 Student::Student(std::string s) : _studentName(s), _major("NONE"),
-                    _minor("NONE"), _gpa(-1), _id(-1) {}
+                    _minor("NONE"), _gpa(-1), _id(-1), _me(this) {}
 Student::Student(std::string& s, int& x) : _studentName(s),
                                         _id(x),_major("NONE"),
-                                        _minor("NONE"), _gpa(-1)  {}
+                                        _minor("NONE"), _gpa(-1), _me(this)  {}
 Student::Student(const std::string& s, const std::string& major,     
                 const std::string& minor, const float& gpa,const int id) : 
                 _studentName(s), _major(major),
-                    _minor(minor), _gpa(gpa), _id(id) {}
+                    _minor(minor), _gpa(gpa), _id(id), _me(this) {}
 Student& Student::operator=(const Student& other)
 {
     if(this->getID() == -1)
@@ -26,23 +26,23 @@ std::string Student::getMinor() const { return _minor; }
 float Student::getGPA() const { return _gpa; }
 int Student::getID() const { return _id; }
 //Modifiers 
-void Student::setStudentName(std::string& s)
+void Student::setStudentName(const std::string& s)
 {
     _studentName = s;
 }
-void Student::setMajor(std::string& s)
+void Student::setMajor(const std::string& s)
 {
     _major = s;
 }
-void Student::setMinor(std::string& s)
+void Student::setMinor(const std::string& s)
 {
     _minor = s;
 }
-void Student::setGPA(float& x)
+void Student::setGPA(const float& x)
 {
     _gpa = x;
 }
-void Student::setID(int& x)
+void Student::setID(const int& x)
 {
     _id = x;
 }
@@ -74,4 +74,12 @@ std::ostream& operator<<(std::ostream& outs, const Student& s)
     outs << "| "<< s.getName() << " | " << s.getID() << " | " << s.getMajor() << " | " << s.getMinor() 
         << " | " << s.getGPA() << " |";
     return outs;
+}
+std::ostream& operator<<(std::ostream& outs, const Student* s)
+{
+    if (s != nullptr)
+        outs << *(s);
+    else 
+        outs << "| ERROR: student is NULLPOINTER |";
+        return outs;
 }
