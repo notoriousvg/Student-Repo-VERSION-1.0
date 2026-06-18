@@ -41,7 +41,7 @@ class Student
         friend bool operator==(const Student& lhs, const Student& rhs);
         //Friend Functions
         friend std::ostream& operator<<(std::ostream& outs, const Student& s);
-        friend std::ostream& operator<<(std::ostream& outs, const Student* s);
+        friend std::ostream& operator<<(std::ostream& outs,  Student* s);
         
 };
 

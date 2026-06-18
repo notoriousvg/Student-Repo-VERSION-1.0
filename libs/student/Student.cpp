@@ -75,10 +75,11 @@ std::ostream& operator<<(std::ostream& outs, const Student& s)
         << " | " << s.getGPA() << " |";
     return outs;
 }
-std::ostream& operator<<(std::ostream& outs, const Student* s)
+std::ostream& operator<<(std::ostream& outs, Student* s)
 {
+    Student* t = s;
     if (s != nullptr)
-        outs << *(s);
+        outs << *(t);
     else 
         outs << "| ERROR: student is NULLPOINTER |";
         return outs;

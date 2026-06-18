@@ -22,11 +22,14 @@ int main()
 
     testMMAP();
     Student me("Victor", "Computer Science", "Data Science", 3.02, 101);
-    Student* ptr_me = &me;
-    std::cout << ptr_me << std::endl;
-    ptr_me->setStudentName("Alfonso");
+    Student* ptr_me = new Student(me);
+    // std::cout << ptr_me << std::endl;
+    // ptr_me->setStudentName("Alfonso");
 
-    std::cout << "Changed the name throguh the pointer\n" << ptr_me << std::endl;
+    // std::cout << "Changed the name throguh the pointer\n" << ptr_me << std::endl;
+    ptr_me = nullptr;
+    (ptr_me != nullptr) ? std::cout << *ptr_me : std::cout << "| ERROR: STUDENT WAS NULLPPOINTER |" << std::endl;
+    delete ptr_me;
     // char userInput = 'n';
     // int menuSection = 0;
     // do 
@@ -55,10 +58,6 @@ int main()
     //         break;
     //     }
     // }while(userInput != 'Y');
-    ptr_me = nullptr;
-    
-    std::cout << ptr_me;
-    delete ptr_me;
     return 0;
 }
 void testMMAP()
@@ -69,24 +68,26 @@ void testMMAP()
     std::vector<std::string> _departments = {"CHICANO", "ECON", "MATH", "PHILOS"};
     /*  CREATING STUDENTS */
     int id = 101;
-    std::vector<Student> students;
-    students.push_back(Student("Victor", "CHICANO", "NONE", 3.4, id));
-    students.push_back(Student("Mike", "PHILOS", "NONE", 3.6, ++id));
-    students.push_back(Student("leilani", "ECON", "MATH", 3.76, ++id));
-    students.push_back(Student("Alfonso", "PHILOS", "NONE", 3.51, ++id));
-    students.push_back(Student("Juan", "MATH", "NONE", 3.45, ++id));
-    students.push_back(Student("Joe", "ECON", "Astronomy", 3.45, ++id));
-    students.push_back(Student("Marie", "PHILOS", "NONE", 3.55, ++id));
-    students.push_back(Student("Curry", "MATH", "ECON", 3.05, ++id));
-    students.push_back(Student("Tom", "CHICANO", "NONE", 3.15, ++id));
+    std::vector<Student*>* students;
+    students->push_back(new Student("Victor", "CHICANO", "NONE", 3.4, id));
+    students->push_back(new Student("Mike", "PHILOS", "NONE", 3.6, ++id));
+    students->push_back(new Student("leilani", "ECON", "MATH", 3.76, ++id));
+    students->push_back(new Student("Alfonso", "PHILOS", "NONE", 3.51, ++id));
+    students->push_back(new Student("Juan", "MATH", "NONE", 3.45, ++id));
+    students->push_back(new Student("Joe", "ECON", "Astronomy", 3.45, ++id));
+    students->push_back(new Student("Curry", "MATH", "ECON", 3.05, ++id));
+    students->push_back(new Student("Marie", "PHILOS", "NONE", 3.55, ++id));
+    students->push_back(new Student("Tom", "CHICANO", "NONE", 3.15, ++id));
+    // std::cout << *students << std::endl;
     /* CREATING COURSES */
     std::vector<Course> chicano;
     chicano.push_back(Course("CHICANO","Introduction to Chicano History", 50, 3));
     chicano.push_back(Course("CHICANO","Mexican and Chicano Art History",130, 3));
     // WHAT CAN THIS SERVE AS? WHY DO I NEED TO STORE THESE TWO VARIABLES
-    std::map<int, std::vector<std::string>> studentsChicanoCourses;
-    studentsChicanoCourses.insert( std::pair<int, std::vector<std::string>>(chicano[0].getCourseNumber(), std::vector<std::string>({"Marie", "Joe"})));
-    std::cout << studentsChicanoCourses[50]; //prints the students names in chicano 50 course 
+    // std::map<int, std::vector<std::string>> studentsChicanoCourses;
+    // studentsChicanoCourses.insert( std::pair<int, std::vector<std::string>>(chicano[0].getCourseNumber(), std::vector<std::string>({"Marie", "Joe"})));
+    // std::cout << studentsChicanoCourses[50]; //prints the students names in chicano 50 course 
+    
     
 }
 void displayMainBanner()
