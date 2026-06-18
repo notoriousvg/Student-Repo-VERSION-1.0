@@ -1,0 +1,1 @@
+add_library(Student Student.h Student.cpp)

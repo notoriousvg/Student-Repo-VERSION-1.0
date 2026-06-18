@@ -1,0 +1,52 @@
+//Create College
+    std::vector<std::string> collegeDept = {"Astronomy", "Linguistics", "Mathematics"};
+    College ltrsScne("College of Letters and Science", collegeDept);
+
+    std::cout << ltrsScne.getCollegeName() << std::endl;
+    std::cout << ltrsScne;
+
+    //Create Students
+    std::string name = "Victor", maj = "Linguistics", min = "NONE";
+    float gpa = 3.4;
+    int id = 101;
+    Student one(name, maj, min, gpa, id);
+    name = "Michelle";
+    maj = "Astronomy";
+    gpa = 3.6;
+    id +=1; 
+    Student two(name, maj, min, gpa, id);
+    name = "Leilani";
+    maj = "Theatre";
+    min = "Linguistics";
+    gpa = 3.9;
+    id +=1;
+    Student three(name, maj, min, gpa, id);
+    name = "Alfonso";
+    maj = "Mathematics";
+    gpa = 3.3;
+    id +=1;
+    Student four(name, maj, min, gpa, id);
+    std::vector<Student> students;
+    students.push_back(one);
+    students.push_back(two);
+    students.push_back(three);
+    students.push_back(four);
+    students.push_back(Student("Juan", "Mathematics", "NONE", 3.45, ++id));
+    
+    //Print initial student list
+    std::cout << students << std::endl;
+
+    Course astro100("Astronomy", "Intro to Astronomy", 100);
+    //Print course
+    std::cout << astro100 << std::endl;
+
+    //Enroll Student to Appropriate Course (MY LOGIC IS WRONG)
+    std::string enrollInto = "astro100"; 
+
+    for (int i = 0; i < students.size(); i++)
+        if (students[i].getMajor() == "Astronomy")
+            astro100.add(students[i]);
+    
+    std::cout << "After Enrollment:\n" << astro100 << std::endl;
+
+    

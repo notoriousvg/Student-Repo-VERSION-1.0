@@ -1,0 +1,1 @@
+add_library(Course Course.h Course.cpp)

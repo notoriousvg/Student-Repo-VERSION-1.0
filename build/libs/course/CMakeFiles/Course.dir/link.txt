@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libCourse.a CMakeFiles/Course.dir/Course.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libCourse.a

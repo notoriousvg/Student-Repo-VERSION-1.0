@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX26.2.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/StudentRepo.dir/src/main.cpp.o -o StudentRepo  libs/mylib/libMyLib.a libs/student/libStudent.a libs/course/libCourse.a libs/dept/libDept.a libs/professor/libProfessor.a libs/college/libCollege.a
