@@ -1,12 +1,12 @@
 #include <iostream>
 #include <iomanip>
 #include <map>
-#include "mylib.h"
+#include <sys/resource.h>
 #include "../libs/student/Student.h"
 #include "../libs/course/Course.h"
 #include "../libs/dept/Dept.cpp"
 #include "../libs/college/College.h"
-template <typename T> std::ostream& operator<<(std::ostream& outs, const std::vector<T> s);
+template <typename T> std::ostream& operator<<(std::ostream& outs, const std::vector<T*> s);
 // td::ostream& operator<<(std::ostream& outs, const std::vector<Student> s);
 
 char LINE[] = {'-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-',
@@ -17,8 +17,15 @@ char LINE[] = {'-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-',
 // void displayMainBanner();
 // void displayMainMenu();
 void testMMAP();
+void print_peak_memory() {
+    struct rusage usage;
+    getrusage(RUSAGE_SELF, &usage);
+    // On Linux, ru_maxrss is in kilobytes; on macOS it is in bytes
+    std::cout << "Peak RAM: " << usage.ru_maxrss << " KB\n";
+}
 int main()
 {
+    print_peak_memory();
 
     testMMAP();
     Student me("Victor", "Computer Science", "Data Science", 3.02, 101);
@@ -30,6 +37,7 @@ int main()
     ptr_me = nullptr;
     (ptr_me != nullptr) ? std::cout << *ptr_me : std::cout << "| ERROR: STUDENT WAS NULLPPOINTER |" << std::endl;
     delete ptr_me;
+    print_peak_memory();
     // char userInput = 'n';
     // int menuSection = 0;
     // do 
@@ -68,7 +76,7 @@ void testMMAP()
     std::vector<std::string> _departments = {"CHICANO", "ECON", "MATH", "PHILOS"};
     /*  CREATING STUDENTS */
     int id = 101;
-    std::vector<Student*>* students;
+    std::vector<Student*>* students = new std::vector<Student*>();
     students->push_back(new Student("Victor", "CHICANO", "NONE", 3.4, id));
     students->push_back(new Student("Mike", "PHILOS", "NONE", 3.6, ++id));
     students->push_back(new Student("leilani", "ECON", "MATH", 3.76, ++id));
@@ -78,7 +86,7 @@ void testMMAP()
     students->push_back(new Student("Curry", "MATH", "ECON", 3.05, ++id));
     students->push_back(new Student("Marie", "PHILOS", "NONE", 3.55, ++id));
     students->push_back(new Student("Tom", "CHICANO", "NONE", 3.15, ++id));
-    // std::cout << *students << std::endl;
+    std::cout << *students << std::endl;
     /* CREATING COURSES */
     std::vector<Course> chicano;
     chicano.push_back(Course("CHICANO","Introduction to Chicano History", 50, 3));
@@ -102,10 +110,10 @@ void displayMainMenu()
 {
     std::cout << "Main Menu:\n1] Add Student\n2] Add Professor\n3]Add College\n4]See Entire College\n>";
 }
-template <typename T> std::ostream& operator<<(std::ostream& outs, const std::vector<T> s)
+template <typename T> std::ostream& operator<<(std::ostream& outs, const std::vector<T*> s)
 {
     for (int _i = 0; _i < s.size(); _i++)
-        outs << s[_i] << std::endl;
+        outs << *s[_i] << std::endl;
 
     return outs;
 }

@@ -1,6 +1,11 @@
 cmake_minimum_required(VERSION 3.1)
 project(StudentRepo VERSION 1.0)
 add_executable(StudentRepo src/main.cpp)
+add_definitions(-std=c++11)
+set(CXX_FLAGS "=Wall")
+set(CMAKE__CXX_FLAGS, "${CXX_FLAGS}")
+
+set(CMAKE_BUILD_TYPE Debug)
 
 #add statio libraries to aid applications 
 add_subdirectory(libs/mylib)
