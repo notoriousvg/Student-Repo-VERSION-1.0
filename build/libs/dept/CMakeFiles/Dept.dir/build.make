@@ -73,15 +73,15 @@ libs/dept/CMakeFiles/Dept.dir/Dept.cpp.o: libs/dept/CMakeFiles/Dept.dir/flags.ma
 libs/dept/CMakeFiles/Dept.dir/Dept.cpp.o: /Users/victorgarcia/Documents/IDK/StudentRepo/libs/dept/Dept.cpp
 libs/dept/CMakeFiles/Dept.dir/Dept.cpp.o: libs/dept/CMakeFiles/Dept.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/victorgarcia/Documents/IDK/StudentRepo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object libs/dept/CMakeFiles/Dept.dir/Dept.cpp.o"
-	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/dept && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/dept/CMakeFiles/Dept.dir/Dept.cpp.o -MF CMakeFiles/Dept.dir/Dept.cpp.o.d -o CMakeFiles/Dept.dir/Dept.cpp.o -c /Users/victorgarcia/Documents/IDK/StudentRepo/libs/dept/Dept.cpp
+	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/dept && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/dept/CMakeFiles/Dept.dir/Dept.cpp.o -MF CMakeFiles/Dept.dir/Dept.cpp.o.d -o CMakeFiles/Dept.dir/Dept.cpp.o -c /Users/victorgarcia/Documents/IDK/StudentRepo/libs/dept/Dept.cpp
 
 libs/dept/CMakeFiles/Dept.dir/Dept.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Dept.dir/Dept.cpp.i"
-	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/dept && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/victorgarcia/Documents/IDK/StudentRepo/libs/dept/Dept.cpp > CMakeFiles/Dept.dir/Dept.cpp.i
+	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/dept && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/victorgarcia/Documents/IDK/StudentRepo/libs/dept/Dept.cpp > CMakeFiles/Dept.dir/Dept.cpp.i
 
 libs/dept/CMakeFiles/Dept.dir/Dept.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Dept.dir/Dept.cpp.s"
-	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/dept && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/victorgarcia/Documents/IDK/StudentRepo/libs/dept/Dept.cpp -o CMakeFiles/Dept.dir/Dept.cpp.s
+	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/dept && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/victorgarcia/Documents/IDK/StudentRepo/libs/dept/Dept.cpp -o CMakeFiles/Dept.dir/Dept.cpp.s
 
 # Object files for target Dept
 Dept_OBJECTS = \

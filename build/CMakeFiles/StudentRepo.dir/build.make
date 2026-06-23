@@ -73,15 +73,15 @@ CMakeFiles/StudentRepo.dir/src/main.cpp.o: CMakeFiles/StudentRepo.dir/flags.make
 CMakeFiles/StudentRepo.dir/src/main.cpp.o: /Users/victorgarcia/Documents/IDK/StudentRepo/src/main.cpp
 CMakeFiles/StudentRepo.dir/src/main.cpp.o: CMakeFiles/StudentRepo.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/victorgarcia/Documents/IDK/StudentRepo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/StudentRepo.dir/src/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StudentRepo.dir/src/main.cpp.o -MF CMakeFiles/StudentRepo.dir/src/main.cpp.o.d -o CMakeFiles/StudentRepo.dir/src/main.cpp.o -c /Users/victorgarcia/Documents/IDK/StudentRepo/src/main.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StudentRepo.dir/src/main.cpp.o -MF CMakeFiles/StudentRepo.dir/src/main.cpp.o.d -o CMakeFiles/StudentRepo.dir/src/main.cpp.o -c /Users/victorgarcia/Documents/IDK/StudentRepo/src/main.cpp
 
 CMakeFiles/StudentRepo.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/StudentRepo.dir/src/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/victorgarcia/Documents/IDK/StudentRepo/src/main.cpp > CMakeFiles/StudentRepo.dir/src/main.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/victorgarcia/Documents/IDK/StudentRepo/src/main.cpp > CMakeFiles/StudentRepo.dir/src/main.cpp.i
 
 CMakeFiles/StudentRepo.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/StudentRepo.dir/src/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/victorgarcia/Documents/IDK/StudentRepo/src/main.cpp -o CMakeFiles/StudentRepo.dir/src/main.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/victorgarcia/Documents/IDK/StudentRepo/src/main.cpp -o CMakeFiles/StudentRepo.dir/src/main.cpp.s
 
 # Object files for target StudentRepo
 StudentRepo_OBJECTS = \

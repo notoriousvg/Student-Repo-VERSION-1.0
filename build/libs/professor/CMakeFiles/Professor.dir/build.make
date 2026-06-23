@@ -73,15 +73,15 @@ libs/professor/CMakeFiles/Professor.dir/Professor.cpp.o: libs/professor/CMakeFil
 libs/professor/CMakeFiles/Professor.dir/Professor.cpp.o: /Users/victorgarcia/Documents/IDK/StudentRepo/libs/professor/Professor.cpp
 libs/professor/CMakeFiles/Professor.dir/Professor.cpp.o: libs/professor/CMakeFiles/Professor.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/victorgarcia/Documents/IDK/StudentRepo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object libs/professor/CMakeFiles/Professor.dir/Professor.cpp.o"
-	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/professor && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/professor/CMakeFiles/Professor.dir/Professor.cpp.o -MF CMakeFiles/Professor.dir/Professor.cpp.o.d -o CMakeFiles/Professor.dir/Professor.cpp.o -c /Users/victorgarcia/Documents/IDK/StudentRepo/libs/professor/Professor.cpp
+	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/professor && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/professor/CMakeFiles/Professor.dir/Professor.cpp.o -MF CMakeFiles/Professor.dir/Professor.cpp.o.d -o CMakeFiles/Professor.dir/Professor.cpp.o -c /Users/victorgarcia/Documents/IDK/StudentRepo/libs/professor/Professor.cpp
 
 libs/professor/CMakeFiles/Professor.dir/Professor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Professor.dir/Professor.cpp.i"
-	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/professor && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/victorgarcia/Documents/IDK/StudentRepo/libs/professor/Professor.cpp > CMakeFiles/Professor.dir/Professor.cpp.i
+	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/professor && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/victorgarcia/Documents/IDK/StudentRepo/libs/professor/Professor.cpp > CMakeFiles/Professor.dir/Professor.cpp.i
 
 libs/professor/CMakeFiles/Professor.dir/Professor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Professor.dir/Professor.cpp.s"
-	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/professor && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/victorgarcia/Documents/IDK/StudentRepo/libs/professor/Professor.cpp -o CMakeFiles/Professor.dir/Professor.cpp.s
+	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/professor && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/victorgarcia/Documents/IDK/StudentRepo/libs/professor/Professor.cpp -o CMakeFiles/Professor.dir/Professor.cpp.s
 
 # Object files for target Professor
 Professor_OBJECTS = \

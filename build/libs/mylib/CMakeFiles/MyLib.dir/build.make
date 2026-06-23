@@ -73,15 +73,15 @@ libs/mylib/CMakeFiles/MyLib.dir/mylib.cpp.o: libs/mylib/CMakeFiles/MyLib.dir/fla
 libs/mylib/CMakeFiles/MyLib.dir/mylib.cpp.o: /Users/victorgarcia/Documents/IDK/StudentRepo/libs/mylib/mylib.cpp
 libs/mylib/CMakeFiles/MyLib.dir/mylib.cpp.o: libs/mylib/CMakeFiles/MyLib.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/victorgarcia/Documents/IDK/StudentRepo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object libs/mylib/CMakeFiles/MyLib.dir/mylib.cpp.o"
-	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/mylib && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/mylib/CMakeFiles/MyLib.dir/mylib.cpp.o -MF CMakeFiles/MyLib.dir/mylib.cpp.o.d -o CMakeFiles/MyLib.dir/mylib.cpp.o -c /Users/victorgarcia/Documents/IDK/StudentRepo/libs/mylib/mylib.cpp
+	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/mylib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/mylib/CMakeFiles/MyLib.dir/mylib.cpp.o -MF CMakeFiles/MyLib.dir/mylib.cpp.o.d -o CMakeFiles/MyLib.dir/mylib.cpp.o -c /Users/victorgarcia/Documents/IDK/StudentRepo/libs/mylib/mylib.cpp
 
 libs/mylib/CMakeFiles/MyLib.dir/mylib.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyLib.dir/mylib.cpp.i"
-	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/mylib && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/victorgarcia/Documents/IDK/StudentRepo/libs/mylib/mylib.cpp > CMakeFiles/MyLib.dir/mylib.cpp.i
+	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/mylib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/victorgarcia/Documents/IDK/StudentRepo/libs/mylib/mylib.cpp > CMakeFiles/MyLib.dir/mylib.cpp.i
 
 libs/mylib/CMakeFiles/MyLib.dir/mylib.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyLib.dir/mylib.cpp.s"
-	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/mylib && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/victorgarcia/Documents/IDK/StudentRepo/libs/mylib/mylib.cpp -o CMakeFiles/MyLib.dir/mylib.cpp.s
+	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/mylib && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/victorgarcia/Documents/IDK/StudentRepo/libs/mylib/mylib.cpp -o CMakeFiles/MyLib.dir/mylib.cpp.s
 
 # Object files for target MyLib
 MyLib_OBJECTS = \

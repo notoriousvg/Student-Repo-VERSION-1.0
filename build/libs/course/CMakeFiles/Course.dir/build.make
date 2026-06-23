@@ -73,15 +73,15 @@ libs/course/CMakeFiles/Course.dir/Course.cpp.o: libs/course/CMakeFiles/Course.di
 libs/course/CMakeFiles/Course.dir/Course.cpp.o: /Users/victorgarcia/Documents/IDK/StudentRepo/libs/course/Course.cpp
 libs/course/CMakeFiles/Course.dir/Course.cpp.o: libs/course/CMakeFiles/Course.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/victorgarcia/Documents/IDK/StudentRepo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object libs/course/CMakeFiles/Course.dir/Course.cpp.o"
-	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/course && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/course/CMakeFiles/Course.dir/Course.cpp.o -MF CMakeFiles/Course.dir/Course.cpp.o.d -o CMakeFiles/Course.dir/Course.cpp.o -c /Users/victorgarcia/Documents/IDK/StudentRepo/libs/course/Course.cpp
+	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/course && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/course/CMakeFiles/Course.dir/Course.cpp.o -MF CMakeFiles/Course.dir/Course.cpp.o.d -o CMakeFiles/Course.dir/Course.cpp.o -c /Users/victorgarcia/Documents/IDK/StudentRepo/libs/course/Course.cpp
 
 libs/course/CMakeFiles/Course.dir/Course.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Course.dir/Course.cpp.i"
-	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/course && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/victorgarcia/Documents/IDK/StudentRepo/libs/course/Course.cpp > CMakeFiles/Course.dir/Course.cpp.i
+	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/course && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/victorgarcia/Documents/IDK/StudentRepo/libs/course/Course.cpp > CMakeFiles/Course.dir/Course.cpp.i
 
 libs/course/CMakeFiles/Course.dir/Course.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Course.dir/Course.cpp.s"
-	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/course && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/victorgarcia/Documents/IDK/StudentRepo/libs/course/Course.cpp -o CMakeFiles/Course.dir/Course.cpp.s
+	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/course && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/victorgarcia/Documents/IDK/StudentRepo/libs/course/Course.cpp -o CMakeFiles/Course.dir/Course.cpp.s
 
 # Object files for target Course
 Course_OBJECTS = \

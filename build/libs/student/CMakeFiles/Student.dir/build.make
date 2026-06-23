@@ -73,15 +73,15 @@ libs/student/CMakeFiles/Student.dir/Student.cpp.o: libs/student/CMakeFiles/Stude
 libs/student/CMakeFiles/Student.dir/Student.cpp.o: /Users/victorgarcia/Documents/IDK/StudentRepo/libs/student/Student.cpp
 libs/student/CMakeFiles/Student.dir/Student.cpp.o: libs/student/CMakeFiles/Student.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/victorgarcia/Documents/IDK/StudentRepo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object libs/student/CMakeFiles/Student.dir/Student.cpp.o"
-	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/student && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/student/CMakeFiles/Student.dir/Student.cpp.o -MF CMakeFiles/Student.dir/Student.cpp.o.d -o CMakeFiles/Student.dir/Student.cpp.o -c /Users/victorgarcia/Documents/IDK/StudentRepo/libs/student/Student.cpp
+	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/student && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/student/CMakeFiles/Student.dir/Student.cpp.o -MF CMakeFiles/Student.dir/Student.cpp.o.d -o CMakeFiles/Student.dir/Student.cpp.o -c /Users/victorgarcia/Documents/IDK/StudentRepo/libs/student/Student.cpp
 
 libs/student/CMakeFiles/Student.dir/Student.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Student.dir/Student.cpp.i"
-	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/student && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/victorgarcia/Documents/IDK/StudentRepo/libs/student/Student.cpp > CMakeFiles/Student.dir/Student.cpp.i
+	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/student && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/victorgarcia/Documents/IDK/StudentRepo/libs/student/Student.cpp > CMakeFiles/Student.dir/Student.cpp.i
 
 libs/student/CMakeFiles/Student.dir/Student.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Student.dir/Student.cpp.s"
-	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/student && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/victorgarcia/Documents/IDK/StudentRepo/libs/student/Student.cpp -o CMakeFiles/Student.dir/Student.cpp.s
+	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/student && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/victorgarcia/Documents/IDK/StudentRepo/libs/student/Student.cpp -o CMakeFiles/Student.dir/Student.cpp.s
 
 # Object files for target Student
 Student_OBJECTS = \

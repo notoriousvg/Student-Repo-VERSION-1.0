@@ -73,15 +73,15 @@ libs/college/CMakeFiles/College.dir/College.cpp.o: libs/college/CMakeFiles/Colle
 libs/college/CMakeFiles/College.dir/College.cpp.o: /Users/victorgarcia/Documents/IDK/StudentRepo/libs/college/College.cpp
 libs/college/CMakeFiles/College.dir/College.cpp.o: libs/college/CMakeFiles/College.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/victorgarcia/Documents/IDK/StudentRepo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object libs/college/CMakeFiles/College.dir/College.cpp.o"
-	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/college && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/college/CMakeFiles/College.dir/College.cpp.o -MF CMakeFiles/College.dir/College.cpp.o.d -o CMakeFiles/College.dir/College.cpp.o -c /Users/victorgarcia/Documents/IDK/StudentRepo/libs/college/College.cpp
+	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/college && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libs/college/CMakeFiles/College.dir/College.cpp.o -MF CMakeFiles/College.dir/College.cpp.o.d -o CMakeFiles/College.dir/College.cpp.o -c /Users/victorgarcia/Documents/IDK/StudentRepo/libs/college/College.cpp
 
 libs/college/CMakeFiles/College.dir/College.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/College.dir/College.cpp.i"
-	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/college && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/victorgarcia/Documents/IDK/StudentRepo/libs/college/College.cpp > CMakeFiles/College.dir/College.cpp.i
+	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/college && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/victorgarcia/Documents/IDK/StudentRepo/libs/college/College.cpp > CMakeFiles/College.dir/College.cpp.i
 
 libs/college/CMakeFiles/College.dir/College.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/College.dir/College.cpp.s"
-	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/college && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/victorgarcia/Documents/IDK/StudentRepo/libs/college/College.cpp -o CMakeFiles/College.dir/College.cpp.s
+	cd /Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/college && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/victorgarcia/Documents/IDK/StudentRepo/libs/college/College.cpp -o CMakeFiles/College.dir/College.cpp.s
 
 # Object files for target College
 College_OBJECTS = \
