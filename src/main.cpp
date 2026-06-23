@@ -1,5 +1,6 @@
 #include <iostream>
-#include <iomanip>
+#include <iomanip> // text formatting 
+#include <fstream> // stream class to both read and write from/to files
 #include <map>
 #include <sys/resource.h>
 #include "../libs/student/Student.h"
@@ -23,21 +24,64 @@ void print_peak_memory() {
     // On Linux, ru_maxrss is in kilobytes; on macOS it is in bytes
     std::cout << "Peak RAM: " << usage.ru_maxrss << " KB\n";
 }
-int main()
+void test_writing_file(char fileName[], bool& fileOpened)
 {
-    print_peak_memory();
+    std::ofstream file;
+    file.open(fileName);
+    if (file.is_open())
+    {
+        std::cout << "Opened successfully!\n";
+        fileOpened = true;
+        file.close();
+    }
+    else
+        fileOpened = false;
+}
 
-    testMMAP();
-    Student me("Victor", "Computer Science", "Data Science", 3.02, 101);
-    Student* ptr_me = new Student(me);
-    // std::cout << ptr_me << std::endl;
-    // ptr_me->setStudentName("Alfonso");
+// opened gets updated, break if false. pos get written and updarterd before returning 
+void writting_to_file(char fileName[], char text[], int& pos, bool& opened)
+{
+    std::ofstream f(fileName);
+    f << pos++ << "\t" << text << "\n"; 
+}
+int main() 
+{
+    bool fileOpened = false;
+    char studentsFileName[] = "students.txt";
+    char studentInfo[25] = "";
+    int pos = 0;
+    test_writing_file(studentsFileName, fileOpened);
+    std::cout << "File " << studentsFileName << " opened successfully: " << std::boolalpha << fileOpened << std::endl;
+    Student temp;
+    temp.setStudentName("victor g");
+    temp.setMajor("CS");
+    temp.setGPA(3.14);
+    temp.setID(101);
+    std::cout << temp << std::endl;
+    for(int _i = 0; _i < temp.getName().size(); _i++)
+    {
+        studentInfo[_i] = temp.getName()[_i];
+        if (_i+1 == temp.getName().size())
+            studentInfo[_i+1] = temp.getName()[_i+1];
+    }
+        
+    // *studentInfo[temp.getName().size()] = '\0';
+    std::cout << studentInfo;
+    writting_to_file(studentsFileName, studentInfo, pos,fileOpened);
+    
+    // print_peak_memory();
 
-    // std::cout << "Changed the name throguh the pointer\n" << ptr_me << std::endl;
-    ptr_me = nullptr;
-    (ptr_me != nullptr) ? std::cout << *ptr_me : std::cout << "| ERROR: STUDENT WAS NULLPPOINTER |" << std::endl;
-    delete ptr_me;
-    print_peak_memory();
+    // testMMAP();
+    // Student me("Victor", "Computer Science", "Data Science", 3.02, 101);
+    // Student* ptr_me = new Student(me);
+    // // std::cout << ptr_me << std::endl;
+    // // ptr_me->setStudentName("Alfonso");
+
+    // // std::cout << "Changed the name throguh the pointer\n" << ptr_me << std::endl;
+    // ptr_me = nullptr;
+    // (ptr_me != nullptr) ? std::cout << *ptr_me : std::cout << "| ERROR: STUDENT WAS NULLPPOINTER |" << std::endl;
+    // delete ptr_me;
+    // print_peak_memory();
     // char userInput = 'n';
     // int menuSection = 0;
     // do 
