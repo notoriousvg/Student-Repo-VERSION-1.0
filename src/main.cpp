@@ -8,7 +8,7 @@
 #include "../libs/dept/Dept.cpp"
 #include "../libs/college/College.h"
 template <typename T> std::ostream& operator<<(std::ostream& outs, const std::vector<T*> s);
-// td::ostream& operator<<(std::ostream& outs, const std::vector<Student> s);
+// std::ostream& operator<<(std::ostream& outs, const std::vector<Student> s);
 
 char LINE[] = {'-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-',
                 '-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-',
@@ -30,28 +30,45 @@ void test_writing_file(char fileName[], bool& fileOpened)
     file.open(fileName);
     if (file.is_open())
     {
-        std::cout << "Opened successfully!\n";
+        std::cout << "File " << fileName << " opened successfully: " 
+                << std::boolalpha << fileOpened << std::endl;
         fileOpened = true;
         file.close();
     }
     else
         fileOpened = false;
 }
-
-// opened gets updated, break if false. pos get written and updarterd before returning 
-void writting_to_file(char fileName[], char text[], int& pos, bool& opened)
+bool open_file(char fName[],std::ofstream& f)
 {
-    std::ofstream f(fileName);
+    f.open(fName);
+    return ((f.is_open()) ?  true : false);
+}
+bool close_file(char fName[], std::ofstream& f)
+{
+    // Logic here might be coded more efficiently
+    if (open_file(fName, f)) 
+    {
+        f.close();
+        return true;
+    }
+    return false;
+}
+// opened gets updated, break if false. pos get written and updarterd before returning 
+void writting_to_file(char fName[], char text[], int& pos, bool& opened)
+{
+    // test_writing_file(fName, opened); // delete later
+    std::ofstream f(fName);
     f << pos++ << "\t" << text << "\n"; 
 }
 int main() 
 {
+    /* Test Variables */
     bool fileOpened = false;
     char studentsFileName[] = "students.txt";
     char studentInfo[25] = "";
     int pos = 0;
-    test_writing_file(studentsFileName, fileOpened);
-    std::cout << "File " << studentsFileName << " opened successfully: " << std::boolalpha << fileOpened << std::endl;
+
+    
     Student temp;
     temp.setStudentName("victor g");
     temp.setMajor("CS");
