@@ -2,6 +2,7 @@
 #include <iomanip> // text formatting 
 #include <fstream> // stream class to both read and write from/to files
 #include <map>
+#include <string>
 #include <sys/resource.h>
 #include "../libs/student/Student.h"
 #include "../libs/course/Course.h"
@@ -24,6 +25,16 @@ void print_peak_memory() {
     // On Linux, ru_maxrss is in kilobytes; on macOS it is in bytes
     std::cout << "Peak RAM: " << usage.ru_maxrss << " KB\n";
 }
+void string_to_char(const std::string& from, char* &to)
+{
+    for(int _i = 0; _i < from.size(); _i++)
+    {
+        to[_i] = from[_i];
+        if (_i+1 == from.size())
+            to[_i+1] = from[_i+1];
+    }
+}
+//Manually initiating instance of ofstream to open / close.
 void test_writing_file(char fileName[], bool& fileOpened)
 {
     std::ofstream file;
@@ -46,20 +57,32 @@ bool open_file(char fName[],std::ofstream& f)
 bool close_file(char fName[], std::ofstream& f)
 {
     // Logic here might be coded more efficiently
-    if (open_file(fName, f)) 
+    if (f.is_open()) 
     {
         f.close();
         return true;
     }
     return false;
 }
+// ASSUME FILE IS OPENED PRIOR. 
 // opened gets updated, break if false. pos get written and updarterd before returning 
-void writting_to_file(char fName[], char text[], int& pos, bool& opened)
+void writing_to_file(char fName[], char text[], int& pos, const int& id, bool& opened)
 {
     // test_writing_file(fName, opened); // delete later
-    std::ofstream f(fName);
-    f << pos++ << "\t" << text << "\n"; 
+    std::ofstream f;
+    opened = open_file(fName,f);
+
+   
+    f << pos++ << " " << id << " " << text; 
+    bool closed = close_file(fName, f);
 }
+
+// returns a line from the file
+std::string& extract_from_file(char fName[])
+{
+
+}
+
 int main() 
 {
     /* Test Variables */
@@ -75,16 +98,13 @@ int main()
     temp.setGPA(3.14);
     temp.setID(101);
     std::cout << temp << std::endl;
-    for(int _i = 0; _i < temp.getName().size(); _i++)
-    {
-        studentInfo[_i] = temp.getName()[_i];
-        if (_i+1 == temp.getName().size())
-            studentInfo[_i+1] = temp.getName()[_i+1];
-    }
-        
-    // *studentInfo[temp.getName().size()] = '\0';
-    std::cout << studentInfo;
-    writting_to_file(studentsFileName, studentInfo, pos,fileOpened);
+    char* ptr = studentInfo;
+    string_to_char(temp.getName(), ptr);
+    std::cout << "With pointer: " << studentInfo;
+
+    studentInfo[temp.getName().size()] = '\0';
+    std::cout << "Manually: "<< studentInfo;
+    writing_to_file(studentsFileName, studentInfo, pos,temp.getID(),fileOpened);
     
     // print_peak_memory();
 

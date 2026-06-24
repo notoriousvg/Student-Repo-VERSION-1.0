@@ -1,0 +1,44 @@
+[
+{
+  "directory": "/Users/victorgarcia/Documents/IDK/StudentRepo/build",
+  "command": "/usr/bin/clang++  -I/Users/victorgarcia/Documents/IDK/StudentRepo/libs/mylib -I/Users/victorgarcia/Documents/IDK/StudentRepo/libs/student -I/Users/victorgarcia/Documents/IDK/StudentRepo/libs/course -I/Users/victorgarcia/Documents/IDK/StudentRepo/libs/dept -I/Users/victorgarcia/Documents/IDK/StudentRepo/libs/professor -I/Users/victorgarcia/Documents/IDK/StudentRepo/libs/college -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX26.2.sdk   -std=c++11 -o CMakeFiles/StudentRepo.dir/src/main.cpp.o -c /Users/victorgarcia/Documents/IDK/StudentRepo/src/main.cpp",
+  "file": "/Users/victorgarcia/Documents/IDK/StudentRepo/src/main.cpp",
+  "output": "CMakeFiles/StudentRepo.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/mylib",
+  "command": "/usr/bin/clang++   -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX26.2.sdk   -std=c++11 -o CMakeFiles/MyLib.dir/mylib.cpp.o -c /Users/victorgarcia/Documents/IDK/StudentRepo/libs/mylib/mylib.cpp",
+  "file": "/Users/victorgarcia/Documents/IDK/StudentRepo/libs/mylib/mylib.cpp",
+  "output": "libs/mylib/CMakeFiles/MyLib.dir/mylib.cpp.o"
+},
+{
+  "directory": "/Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/student",
+  "command": "/usr/bin/clang++   -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX26.2.sdk   -std=c++11 -o CMakeFiles/Student.dir/Student.cpp.o -c /Users/victorgarcia/Documents/IDK/StudentRepo/libs/student/Student.cpp",
+  "file": "/Users/victorgarcia/Documents/IDK/StudentRepo/libs/student/Student.cpp",
+  "output": "libs/student/CMakeFiles/Student.dir/Student.cpp.o"
+},
+{
+  "directory": "/Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/course",
+  "command": "/usr/bin/clang++   -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX26.2.sdk   -std=c++11 -o CMakeFiles/Course.dir/Course.cpp.o -c /Users/victorgarcia/Documents/IDK/StudentRepo/libs/course/Course.cpp",
+  "file": "/Users/victorgarcia/Documents/IDK/StudentRepo/libs/course/Course.cpp",
+  "output": "libs/course/CMakeFiles/Course.dir/Course.cpp.o"
+},
+{
+  "directory": "/Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/dept",
+  "command": "/usr/bin/clang++   -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX26.2.sdk   -std=c++11 -o CMakeFiles/Dept.dir/Dept.cpp.o -c /Users/victorgarcia/Documents/IDK/StudentRepo/libs/dept/Dept.cpp",
+  "file": "/Users/victorgarcia/Documents/IDK/StudentRepo/libs/dept/Dept.cpp",
+  "output": "libs/dept/CMakeFiles/Dept.dir/Dept.cpp.o"
+},
+{
+  "directory": "/Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/professor",
+  "command": "/usr/bin/clang++   -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX26.2.sdk   -std=c++11 -o CMakeFiles/Professor.dir/Professor.cpp.o -c /Users/victorgarcia/Documents/IDK/StudentRepo/libs/professor/Professor.cpp",
+  "file": "/Users/victorgarcia/Documents/IDK/StudentRepo/libs/professor/Professor.cpp",
+  "output": "libs/professor/CMakeFiles/Professor.dir/Professor.cpp.o"
+},
+{
+  "directory": "/Users/victorgarcia/Documents/IDK/StudentRepo/build/libs/college",
+  "command": "/usr/bin/clang++   -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX26.2.sdk   -std=c++11 -o CMakeFiles/College.dir/College.cpp.o -c /Users/victorgarcia/Documents/IDK/StudentRepo/libs/college/College.cpp",
+  "file": "/Users/victorgarcia/Documents/IDK/StudentRepo/libs/college/College.cpp",
+  "output": "libs/college/CMakeFiles/College.dir/College.cpp.o"
+}
+]
