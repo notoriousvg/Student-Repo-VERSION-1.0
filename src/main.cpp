@@ -8,6 +8,8 @@
 #include "../libs/course/Course.h"
 #include "../libs/dept/Dept.cpp"
 #include "../libs/college/College.h"
+
+/*TODO: FILE IS NOT BEING APPENEDED, ONLY ONE RECORD IS WRITTEN */
 template <typename T> std::ostream& operator<<(std::ostream& outs, const std::vector<T*> s);
 // std::ostream& operator<<(std::ostream& outs, const std::vector<Student> s);
 
@@ -23,7 +25,7 @@ void print_peak_memory() {
     struct rusage usage;
     getrusage(RUSAGE_SELF, &usage);
     // On Linux, ru_maxrss is in kilobytes; on macOS it is in bytes
-    std::cout << "Peak RAM: " << usage.ru_maxrss << " KB\n";
+    std::cout << "Peak RAM: " << usage.ru_maxrss << " bytes or " << float(usage.ru_maxrss)/ 1000000 << " Mb.\n";
 }
 void string_to_char(const std::string& from, char* &to)
 {
@@ -37,7 +39,7 @@ void string_to_char(const std::string& from, char* &to)
 //Manually initiating instance of ofstream to open / close.
 void test_writing_file(char fileName[], bool& fileOpened)
 {
-    std::ofstream file;
+    std::fstream file;
     file.open(fileName);
     if (file.is_open())
     {
@@ -49,12 +51,12 @@ void test_writing_file(char fileName[], bool& fileOpened)
     else
         fileOpened = false;
 }
-bool open_file(char fName[],std::ofstream& f)
+bool open_file(char fName[],std::fstream& f)
 {
     f.open(fName);
     return ((f.is_open()) ?  true : false);
 }
-bool close_file(char fName[], std::ofstream& f)
+bool close_file(char fName[], std::fstream& f)
 {
     // Logic here might be coded more efficiently
     if (f.is_open()) 
@@ -69,27 +71,27 @@ bool close_file(char fName[], std::ofstream& f)
 void writing_to_file(char fName[], char text[], int& pos, const int& id, bool& opened)
 {
     // test_writing_file(fName, opened); // delete later
-    std::ofstream f;
+    std::fstream f(fName, std::ios::in | std::ios::out | std::ios::app);
     opened = open_file(fName,f);
 
-   
-    f << pos++ << " " << id << " " << text; 
+    
+    f << pos++ << " " << id << " " << text << std::endl; 
     bool closed = close_file(fName, f);
 }
 
-// returns a line from the file
+// ASSUMES FILE IS OPENED. returns a line from the file
 std::string& extract_from_file(char fName[])
 {
-
+    
 }
 
 int main() 
 {
     /* Test Variables */
-    bool fileOpened = false;
-    char studentsFileName[] = "students.txt";
-    char studentInfo[25] = "";
-    int pos = 0;
+    bool fileOpened = false;                                // Checks if file was opened successfully
+    char studentsFileName[] = "students.txt";               // File name to write students into
+    char studentInfo[25] = "";                              // empty student name variable 
+    int pos = 0;                                            // Position in the file (i think)
 
     
     Student temp;
@@ -98,15 +100,20 @@ int main()
     temp.setGPA(3.14);
     temp.setID(101);
     std::cout << temp << std::endl;
-    char* ptr = studentInfo;
+    char* ptr = new char[25];
+    ptr = studentInfo;
     string_to_char(temp.getName(), ptr);
     std::cout << "With pointer: " << studentInfo;
 
     studentInfo[temp.getName().size()] = '\0';
-    std::cout << "Manually: "<< studentInfo;
+    std::cout << "Manually: "<< studentInfo << std::endl;
     writing_to_file(studentsFileName, studentInfo, pos,temp.getID(),fileOpened);
+
     
-    // print_peak_memory();
+    Student temp2("leilani t", "Theatre", "Drama", 3.6, 102);
+    string_to_char(temp2.getName(), ptr);
+    writing_to_file(studentsFileName, studentInfo,pos, temp2.getID(), fileOpened);
+    print_peak_memory();
 
     // testMMAP();
     // Student me("Victor", "Computer Science", "Data Science", 3.02, 101);

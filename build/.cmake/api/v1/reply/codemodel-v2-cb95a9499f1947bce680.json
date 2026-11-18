@@ -18,7 +18,7 @@
 					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.1"
+						"string" : "3.5"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -32,7 +32,7 @@
 					"jsonFile" : "directory-libs.mylib-Debug-feb832164c5523ad014b.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.1"
+						"string" : "3.5"
 					},
 					"parentIndex" : 0,
 					"projectIndex" : 0,
@@ -47,7 +47,7 @@
 					"jsonFile" : "directory-libs.student-Debug-715044ed429ecb1f4c9c.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.1"
+						"string" : "3.5"
 					},
 					"parentIndex" : 0,
 					"projectIndex" : 0,
@@ -62,7 +62,7 @@
 					"jsonFile" : "directory-libs.course-Debug-249eb557cfc8f3e71afe.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.1"
+						"string" : "3.5"
 					},
 					"parentIndex" : 0,
 					"projectIndex" : 0,
@@ -77,7 +77,7 @@
 					"jsonFile" : "directory-libs.dept-Debug-1250ab12f0cd129fd3b7.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.1"
+						"string" : "3.5"
 					},
 					"parentIndex" : 0,
 					"projectIndex" : 0,
@@ -92,7 +92,7 @@
 					"jsonFile" : "directory-libs.professor-Debug-0812af71b1d1395ca1e6.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.1"
+						"string" : "3.5"
 					},
 					"parentIndex" : 0,
 					"projectIndex" : 0,
@@ -107,7 +107,7 @@
 					"jsonFile" : "directory-libs.college-Debug-b2117a010d2f95dd3c8e.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.1"
+						"string" : "3.5"
 					},
 					"parentIndex" : 0,
 					"projectIndex" : 0,
@@ -150,49 +150,49 @@
 				{
 					"directoryIndex" : 6,
 					"id" : "College::@d8fb7968aa15ebd34a2f",
-					"jsonFile" : "target-College-Debug-ced382de732d2a238be7.json",
+					"jsonFile" : "target-College-Debug-b7fd8516f5f5dbe231a8.json",
 					"name" : "College",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "Course::@f721465d9252140e1153",
-					"jsonFile" : "target-Course-Debug-2525e5b0c62bc1eba722.json",
+					"jsonFile" : "target-Course-Debug-b8f3cf95e04473aca193.json",
 					"name" : "Course",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 4,
 					"id" : "Dept::@94b67ab9eeb025deefa8",
-					"jsonFile" : "target-Dept-Debug-e99847cb31cd7de5f412.json",
+					"jsonFile" : "target-Dept-Debug-e956007db102943ec637.json",
 					"name" : "Dept",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "MyLib::@677a2b4a068cc5769c55",
-					"jsonFile" : "target-MyLib-Debug-ca47e10e96f69f983bdd.json",
+					"jsonFile" : "target-MyLib-Debug-7a017aa83a77d008aa41.json",
 					"name" : "MyLib",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 5,
 					"id" : "Professor::@e255d0dd951e81901e13",
-					"jsonFile" : "target-Professor-Debug-8179af76b33aaaa2b28c.json",
+					"jsonFile" : "target-Professor-Debug-d7c69e4862cade658232.json",
 					"name" : "Professor",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "Student::@6e4a12e2a349c1bd5d96",
-					"jsonFile" : "target-Student-Debug-3e4cee5492dcadf62ed4.json",
+					"jsonFile" : "target-Student-Debug-35651304892427c36f4c.json",
 					"name" : "Student",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "StudentRepo::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-StudentRepo-Debug-033f161bf43bf54bfb67.json",
+					"jsonFile" : "target-StudentRepo-Debug-9ae43cd8142f41a3be95.json",
 					"name" : "StudentRepo",
 					"projectIndex" : 0
 				}

@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/Users/victorgarcia/Documents/IDK/StudentRepo/libs/mylib -I/Users/victorgarcia/Documents/IDK/StudentRepo/libs/student -I/Users/victorgarcia/Documents/IDK/StudentRepo/libs/course -I/Users/victorgarcia/Documents/IDK/StudentRepo/libs/dept -I/Users/victorgarcia/Documents/IDK/StudentRepo/libs/professor -I/Users/victorgarcia/Documents/IDK/StudentRepo/libs/college
 
-CXX_FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX26.2.sdk   -std=c++11
+CXX_FLAGS = -g   -std=c++11
 

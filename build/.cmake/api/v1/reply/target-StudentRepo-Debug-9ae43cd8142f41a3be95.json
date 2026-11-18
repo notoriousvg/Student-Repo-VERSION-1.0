@@ -109,7 +109,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX26.2.sdk   -std=c++11"
+					"fragment" : "-g   -std=c++11"
 				}
 			],
 			"includes" : 
@@ -149,16 +149,16 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 2,
-			"id" : "MyLib::@677a2b4a068cc5769c55"
-		},
-		{
 			"backtrace" : 3,
 			"id" : "Student::@6e4a12e2a349c1bd5d96"
 		},
 		{
 			"backtrace" : 4,
 			"id" : "Course::@f721465d9252140e1153"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "MyLib::@677a2b4a068cc5769c55"
 		},
 		{
 			"backtrace" : 5,

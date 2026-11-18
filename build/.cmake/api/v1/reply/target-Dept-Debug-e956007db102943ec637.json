@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "libs/course/libCourse.a"
+			"path" : "libs/dept/libDept.a"
 		}
 	],
 	"backtrace" : 1,
@@ -15,7 +15,7 @@
 		],
 		"files" : 
 		[
-			"libs/course/CMakeLists.txt"
+			"libs/dept/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -36,38 +36,31 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX26.2.sdk   -std=c++11"
+					"fragment" : "-g   -std=c++11"
 				}
 			],
 			"language" : "CXX",
 			"sourceIndexes" : 
 			[
-				1
+				0
 			]
 		}
 	],
-	"id" : "Course::@f721465d9252140e1153",
-	"name" : "Course",
-	"nameOnDisk" : "libCourse.a",
+	"id" : "Dept::@94b67ab9eeb025deefa8",
+	"name" : "Dept",
+	"nameOnDisk" : "libDept.a",
 	"paths" : 
 	{
-		"build" : "libs/course",
-		"source" : "libs/course"
+		"build" : "libs/dept",
+		"source" : "libs/dept"
 	},
 	"sourceGroups" : 
 	[
 		{
-			"name" : "Header Files",
-			"sourceIndexes" : 
-			[
-				0
-			]
-		},
-		{
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				1
+				0
 			]
 		}
 	],
@@ -75,14 +68,9 @@
 	[
 		{
 			"backtrace" : 1,
-			"path" : "libs/course/Course.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "libs/course/Course.cpp",
-			"sourceGroupIndex" : 1
+			"path" : "libs/dept/Dept.cpp",
+			"sourceGroupIndex" : 0
 		}
 	],
 	"type" : "STATIC_LIBRARY"

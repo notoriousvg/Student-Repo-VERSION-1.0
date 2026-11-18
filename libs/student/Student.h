@@ -20,7 +20,10 @@ class Student
         Student(std::string& s, int& id);                    // NAME, ID
         Student(const std::string& s, const std::string& major,          // FULL RECORD
                 const std::string& minor, const float& gpa, const int id);
-        
+        ~Student()
+        {
+          
+        }
         Student& operator=(const Student& other);
         //Accessors
         std::string getName() const;

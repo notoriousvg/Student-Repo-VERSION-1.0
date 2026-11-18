@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "libs/professor/libProfessor.a"
+			"path" : "libs/student/libStudent.a"
 		}
 	],
 	"backtrace" : 1,
@@ -15,7 +15,7 @@
 		],
 		"files" : 
 		[
-			"libs/professor/CMakeLists.txt"
+			"libs/student/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -36,7 +36,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX26.2.sdk   -std=c++11"
+					"fragment" : "-g   -std=c++11"
 				}
 			],
 			"language" : "CXX",
@@ -46,13 +46,13 @@
 			]
 		}
 	],
-	"id" : "Professor::@e255d0dd951e81901e13",
-	"name" : "Professor",
-	"nameOnDisk" : "libProfessor.a",
+	"id" : "Student::@6e4a12e2a349c1bd5d96",
+	"name" : "Student",
+	"nameOnDisk" : "libStudent.a",
 	"paths" : 
 	{
-		"build" : "libs/professor",
-		"source" : "libs/professor"
+		"build" : "libs/student",
+		"source" : "libs/student"
 	},
 	"sourceGroups" : 
 	[
@@ -75,13 +75,13 @@
 	[
 		{
 			"backtrace" : 1,
-			"path" : "libs/professor/Professor.h",
+			"path" : "libs/student/Student.h",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "libs/professor/Professor.cpp",
+			"path" : "libs/student/Student.cpp",
 			"sourceGroupIndex" : 1
 		}
 	],

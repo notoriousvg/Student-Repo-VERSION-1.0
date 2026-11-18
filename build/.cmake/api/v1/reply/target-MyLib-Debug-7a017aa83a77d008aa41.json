@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "libs/college/libCollege.a"
+			"path" : "libs/mylib/libMyLib.a"
 		}
 	],
 	"backtrace" : 1,
@@ -15,7 +15,7 @@
 		],
 		"files" : 
 		[
-			"libs/college/CMakeLists.txt"
+			"libs/mylib/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -36,7 +36,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX26.2.sdk   -std=c++11"
+					"fragment" : "-g   -std=c++11"
 				}
 			],
 			"language" : "CXX",
@@ -46,13 +46,13 @@
 			]
 		}
 	],
-	"id" : "College::@d8fb7968aa15ebd34a2f",
-	"name" : "College",
-	"nameOnDisk" : "libCollege.a",
+	"id" : "MyLib::@677a2b4a068cc5769c55",
+	"name" : "MyLib",
+	"nameOnDisk" : "libMyLib.a",
 	"paths" : 
 	{
-		"build" : "libs/college",
-		"source" : "libs/college"
+		"build" : "libs/mylib",
+		"source" : "libs/mylib"
 	},
 	"sourceGroups" : 
 	[
@@ -75,13 +75,13 @@
 	[
 		{
 			"backtrace" : 1,
-			"path" : "libs/college/College.h",
+			"path" : "libs/mylib/mylib.h",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "libs/college/College.cpp",
+			"path" : "libs/mylib/mylib.cpp",
 			"sourceGroupIndex" : 1
 		}
 	],
