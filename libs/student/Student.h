@@ -8,6 +8,7 @@ class Student
         std::string _studentName;
         std::string _major;
         std::string _minor;
+        std::string _gradLevel;
         float _gpa;
         int _id;
         Student* _me;
@@ -29,12 +30,14 @@ class Student
         std::string getName() const;
         std::string getMajor() const;
         std::string getMinor() const;
+        std::string getGradLevel() const;
         float getGPA() const;
         int getID() const;
         //Modifiers 
         void setStudentName(const std::string& s);
         void setMajor(const std::string& s);
         void setMinor(const std::string& s);
+        void setGradLevel(const std::string& g);
         void setGPA(const float& x);
         void setID(const int& x);
         void copy(const Student& other);

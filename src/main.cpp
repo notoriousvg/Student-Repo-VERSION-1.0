@@ -10,6 +10,8 @@
 #include "../libs/college/College.h"
 
 /*TODO: FILE IS NOT BEING APPENEDED, ONLY ONE RECORD IS WRITTEN */
+/* TODO: NEED TO RETRICT NAME OF STUDENT TO UNDER A NUMBER OF CHARS*/
+/* TODO: NEED TO TIE STUDENT WITH COLLEGE DEPARTMENT BY A KEY(STUDENT_ID) */
 template <typename T> std::ostream& operator<<(std::ostream& outs, const std::vector<T*> s);
 // std::ostream& operator<<(std::ostream& outs, const std::vector<Student> s);
 
@@ -66,16 +68,15 @@ bool close_file(char fName[], std::fstream& f)
     }
     return false;
 }
-// ASSUME FILE IS OPENED PRIOR. 
+// TODO: CHECK TOTAL STUDENT RECORD STRING LENGTH TO BE <= MAXLEN(80) PRIOR
 // opened gets updated, break if false. pos get written and updarterd before returning 
 void writing_to_file(char fName[], char text[], int& pos, const int& id, bool& opened)
 {
     // test_writing_file(fName, opened); // delete later
-    std::fstream f(fName, std::ios::in | std::ios::out | std::ios::app);
+    std::fstream f(fName, std::ios::binary | std::ios::in | std::ios::out | std::ios::app);
     opened = open_file(fName,f);
 
-    
-    f << pos++ << " " << id << " " << text << std::endl; 
+    f << pos++ << " " << id << " " << text; 
     bool closed = close_file(fName, f);
 }
 
@@ -88,32 +89,29 @@ std::string& extract_from_file(char fName[])
 int main() 
 {
     /* Test Variables */
+    const int MAXLEN = 80;
     bool fileOpened = false;                                // Checks if file was opened successfully
     char studentsFileName[] = "students.txt";               // File name to write students into
-    char studentInfo[25] = "";                              // empty student name variable 
+    char record[MAXLEN] = "";                              // empty student name variable 
     int pos = 0;                                            // Position in the file (i think)
 
-    
-    Student temp;
-    temp.setStudentName("victor g");
-    temp.setMajor("CS");
-    temp.setGPA(3.14);
-    temp.setID(101);
-    std::cout << temp << std::endl;
-    char* ptr = new char[25];
-    ptr = studentInfo;
-    string_to_char(temp.getName(), ptr);
-    std::cout << "With pointer: " << studentInfo;
+    //Student Dummy (Input from Uuser)
+    Student victor;
+    victor.setStudentName("Victor Alfonso Garcia");
+    victor.setMajor("CPSC");
+    victor.setMinor("DS");
+    victor.setGradLevel("UNDR");
+    victor.setGPA(3.14);
+    victor.setID(101);
 
-    studentInfo[temp.getName().size()] = '\0';
-    std::cout << "Manually: "<< studentInfo << std::endl;
-    writing_to_file(studentsFileName, studentInfo, pos,temp.getID(),fileOpened);
 
-    
-    Student temp2("leilani t", "Theatre", "Drama", 3.6, 102);
-    string_to_char(temp2.getName(), ptr);
-    writing_to_file(studentsFileName, studentInfo,pos, temp2.getID(), fileOpened);
-    print_peak_memory();
+    std::cout << victor << std::endl;
+
+
+    // Student temp2("leilani t", "Theatre", "Drama", 3.6, 102);
+    // string_to_char(temp2.getName(), ptr);
+    // writing_to_file(studentsFileName, studentInfo,pos, temp2.getID(), fileOpened);
+    // print_peak_memory();
 
     // testMMAP();
     // Student me("Victor", "Computer Science", "Data Science", 3.02, 101);

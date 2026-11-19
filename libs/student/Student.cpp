@@ -23,6 +23,7 @@ Student& Student::operator=(const Student& other)
 std::string Student::getName() const { return _studentName; }
 std::string Student::getMajor() const { return _major; }
 std::string Student::getMinor() const { return _minor; }
+std::string Student::getGradLevel() const { return _gradLevel; }
 float Student::getGPA() const { return _gpa; }
 int Student::getID() const { return _id; }
 //Modifiers 
@@ -45,6 +46,10 @@ void Student::setGPA(const float& x)
 void Student::setID(const int& x)
 {
     _id = x;
+}
+void Student::setGradLevel(const std::string& g)
+{
+    _gradLevel = g;
 }
 void Student::copy(const Student& other)
 {
@@ -72,6 +77,6 @@ bool operator==(const Student& lhs, const Student& rhs)
 std::ostream& operator<<(std::ostream& outs, const Student& s)
 {
     outs << "| "<< s.getName() << " | " << s.getID() << " | " << s.getMajor() << " | " << s.getMinor() 
-        << " | " << s.getGPA() << " |";
+        << " | " << s.getGradLevel() << " | " << s.getGPA() << " |";
     return outs;
 }

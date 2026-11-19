@@ -185,9 +185,9 @@ libs/student/clean: libs/student/CMakeFiles/Student.dir/clean
 # Target rules for target CMakeFiles/StudentRepo.dir
 
 # All Build rule for target.
+CMakeFiles/StudentRepo.dir/all: libs/mylib/CMakeFiles/MyLib.dir/all
 CMakeFiles/StudentRepo.dir/all: libs/student/CMakeFiles/Student.dir/all
 CMakeFiles/StudentRepo.dir/all: libs/course/CMakeFiles/Course.dir/all
-CMakeFiles/StudentRepo.dir/all: libs/mylib/CMakeFiles/MyLib.dir/all
 CMakeFiles/StudentRepo.dir/all: libs/dept/CMakeFiles/Dept.dir/all
 CMakeFiles/StudentRepo.dir/all: libs/professor/CMakeFiles/Professor.dir/all
 CMakeFiles/StudentRepo.dir/all: libs/college/CMakeFiles/College.dir/all
