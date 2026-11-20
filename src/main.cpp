@@ -19,7 +19,7 @@ char LINE[] = {'-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-',
                 '-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-',
                 '-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-',
                 '-','-','-','-','-','-','-','-','-','-',};
-
+const int MAXLEN = 80;
 // void displayMainBanner();
 // void displayMainMenu();
 void testMMAP();
@@ -53,12 +53,12 @@ void test_writing_file(char fileName[], bool& fileOpened)
     else
         fileOpened = false;
 }
-bool open_file(char fName[],std::fstream& f)
+bool open_file(char fName[],std::ofstream& f)
 {
-    f.open(fName);
+    f.open(fName, (fName, std::ios::binary | std::ios::app));
     return ((f.is_open()) ?  true : false);
 }
-bool close_file(char fName[], std::fstream& f)
+bool close_file(char fName[], std::ofstream& f)
 {
     // Logic here might be coded more efficiently
     if (f.is_open()) 
@@ -70,14 +70,20 @@ bool close_file(char fName[], std::fstream& f)
 }
 // TODO: CHECK TOTAL STUDENT RECORD STRING LENGTH TO BE <= MAXLEN(80) PRIOR
 // opened gets updated, break if false. pos get written and updarterd before returning 
-void writing_to_file(char fName[], char text[], int& pos, const int& id, bool& opened)
+bool writing_to_file(char fName[], const char* buffer, int& pos, bool& opened)
 {
     // test_writing_file(fName, opened); // delete later
-    std::fstream f(fName, std::ios::binary | std::ios::in | std::ios::out | std::ios::app);
+    std::ofstream f;
+    
     opened = open_file(fName,f);
-
-    f << pos++ << " " << id << " " << text; 
+    if (!opened)
+        return false;
+    
+    f.write(buffer,MAXLEN );
     bool closed = close_file(fName, f);
+    if (!closed)
+        return false;
+    return true;
 }
 
 // ASSUMES FILE IS OPENED. returns a line from the file
@@ -89,12 +95,13 @@ std::string& extract_from_file(char fName[])
 int main() 
 {
     /* Test Variables */
-    const int MAXLEN = 80;
+    
     bool fileOpened = false;                                // Checks if file was opened successfully
     char studentsFileName[] = "students.txt";               // File name to write students into
     char record[MAXLEN] = "";                              // empty student name variable 
-    int pos = 0;                                            // Position in the file (i think)
-
+    int studentRecordNum = 0;                              // Position in the file (i think)
+    char *buffer = new char[MAXLEN];
+    
     //Student Dummy (Input from Uuser)
     Student victor;
     victor.setStudentName("Victor Alfonso Garcia");
@@ -104,10 +111,17 @@ int main()
     victor.setGPA(3.14);
     victor.setID(101);
 
+    //Tie student to their DEPT using key(student id)
+    
+    //clean & concat student record into one string
+    std::string temp = victor.concatRecord();
+    string_to_char(temp, buffer);
 
-    std::cout << victor << std::endl;
+    // std::cout << temp << std::endl; 
+    writing_to_file(studentsFileName, buffer, studentRecordNum, fileOpened);
 
 
+    delete [] buffer;
     // Student temp2("leilani t", "Theatre", "Drama", 3.6, 102);
     // string_to_char(temp2.getName(), ptr);
     // writing_to_file(studentsFileName, studentInfo,pos, temp2.getID(), fileOpened);

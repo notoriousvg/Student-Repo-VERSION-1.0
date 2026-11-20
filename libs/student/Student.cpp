@@ -68,6 +68,14 @@ void Student::update(const float& f)
 {
     _gpa = f;
 }
+std::string Student::concatRecord()
+{
+    std::string _s = _studentName + " " + _major + " " +  _minor + " " +
+                    _gradLevel + " " + std::to_string(_gpa) + " " + 
+                    std::to_string(_id); 
+
+    return _s;
+}
 bool operator==(const Student& lhs, const Student& rhs)
 {
     if ((lhs._studentName == rhs._studentName) && (lhs._id == rhs._id))

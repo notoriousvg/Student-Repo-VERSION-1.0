@@ -43,6 +43,7 @@ class Student
         void copy(const Student& other);
         void update(const std::string& s, int code);              // code(1) = major, code(0) = minor
         void update(const float& f);
+        std::string concatRecord();
 
         friend bool operator==(const Student& lhs, const Student& rhs);
         //Friend Functions
