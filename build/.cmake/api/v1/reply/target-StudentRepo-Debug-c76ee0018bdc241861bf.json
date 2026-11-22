@@ -149,14 +149,6 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 2,
-			"id" : "MyLib::@677a2b4a068cc5769c55"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "Student::@6e4a12e2a349c1bd5d96"
-		},
-		{
 			"backtrace" : 4,
 			"id" : "Course::@f721465d9252140e1153"
 		},
@@ -171,6 +163,14 @@
 		{
 			"backtrace" : 7,
 			"id" : "College::@d8fb7968aa15ebd34a2f"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "MyLib::@677a2b4a068cc5769c55"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "Student::@6e4a12e2a349c1bd5d96"
 		}
 	],
 	"id" : "StudentRepo::@6890427a1f51a3e7e1df",

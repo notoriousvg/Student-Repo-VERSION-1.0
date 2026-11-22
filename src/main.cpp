@@ -8,7 +8,9 @@
 #include "../libs/course/Course.h"
 #include "../libs/dept/Dept.cpp"
 #include "../libs/college/College.h"
-
+/* NOT USING BUFFER ACCORDINGLY, I HAVR TO LOAD MORE THAN MAXLEN TO BUFFER 
+    THEN READ FROM THE BUFFER UNTIL DONE AND THEN LOAD MORE SEGMENT INTO 
+    BUFFER AGAIN. */
 /*TODO: FILE IS NOT BEING APPENEDED, ONLY ONE RECORD IS WRITTEN */
 /* TODO: NEED TO RETRICT NAME OF STUDENT TO UNDER A NUMBER OF CHARS*/
 /* TODO: NEED TO TIE STUDENT WITH COLLEGE DEPARTMENT BY A KEY(STUDENT_ID) */
@@ -20,6 +22,7 @@ char LINE[] = {'-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-',
                 '-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-',
                 '-','-','-','-','-','-','-','-','-','-',};
 const int MAXLEN = 80;
+const int MAXREAD = 160;
 // void displayMainBanner();
 // void displayMainMenu();
 void testMMAP();
@@ -55,7 +58,7 @@ void test_writing_file(char fileName[], bool& fileOpened)
 }
 bool open_file(char fName[],std::ofstream& f)
 {
-    f.open(fName, (fName, std::ios::binary | std::ios::app));
+    f.open(fName, std::ios::binary | std::ios::app);
     return ((f.is_open()) ?  true : false);
 }
 bool close_file(char fName[], std::ofstream& f)
@@ -86,12 +89,39 @@ bool writing_to_file(char fName[], const char* buffer, int& pos, bool& opened)
     return true;
 }
 
-// ASSUMES FILE IS OPENED. returns a line from the file
-std::string& extract_from_file(char fName[])
+// ASSUMES FILE IS OPENED. returns a line from the file as buffer.
+// optionally, I can specify which record to read from. if record number DNE 
+// return false and nothing gets assigned to buffer.
+bool reading_from_file(char fName[], char *buffer, int recordNum = 0)
 {
-    
+    char * _b = new char[MAXREAD];
+    bool readOnce = false;
+    std::ifstream ins;
+    int _i = 0;
+    int _recNum = recordNum * 80;
+    if (!ins.is_open()) 
+        ins.open(fName, std::ifstream::binary );
+    while (!ins.eof())
+    {
+        ins.read(_b, MAXREAD);
+        std::cout << "Read " << ins.gcount() << " characters:\n" << 
+        _b << std::endl;
+        readOnce = true;
+        //check if i need to search reacordNum
+        if (_recNum != 0 && MAXLEN > _recNum * 80)
+        {
+            
+            buffer = _b + 80;
+        }
+        else 
+            buffer = _b;
+    }
+    if (ins.is_open())
+        ins.close();
+    delete [] _b;
+    return readOnce;
 }
-
+void load_buffer(char* buffer, const int MAX = 160);
 int main() 
 {
     /* Test Variables */
@@ -101,7 +131,7 @@ int main()
     char record[MAXLEN] = "";                              // empty student name variable 
     int studentRecordNum = 0;                              // Position in the file (i think)
     char *buffer = new char[MAXLEN];
-    
+    int studentPos= 0;
     //Student Dummy (Input from Uuser)
     Student victor;
     victor.setStudentName("Victor Alfonso Garcia");
@@ -110,17 +140,40 @@ int main()
     victor.setGradLevel("UNDR");
     victor.setGPA(3.14);
     victor.setID(101);
+    studentPos++;
 
     //Tie student to their DEPT using key(student id)
     
     //clean & concat student record into one string
-    std::string temp = victor.concatRecord();
+    std::string temp = victor.concatRecord(studentPos);
+    
+    //copy string to char* 
     string_to_char(temp, buffer);
 
     // std::cout << temp << std::endl; 
     writing_to_file(studentsFileName, buffer, studentRecordNum, fileOpened);
+    
+    Student leilani;
+    leilani.setStudentName("Leilani Marie Trevino");
+    leilani.setMajor("THTRE");
+    leilani.setMinor("DRMA");
+    leilani.setGradLevel("UNDR");
+    leilani.setGPA(3.44);
+    leilani.setID(102);
+    studentPos++;
+    
+    //Tie student to their DEPT using key(student id)
+    
+    //clean & concat student record into one string
+    temp = leilani.concatRecord(studentPos);
 
+    //copy string to char*
+    string_to_char(temp, buffer);
 
+    writing_to_file(studentsFileName, buffer, studentPos, fileOpened);
+
+    std::cout << "Reading from file:\n" << reading_from_file(studentsFileName, buffer, 2);
+    
     delete [] buffer;
     // Student temp2("leilani t", "Theatre", "Drama", 3.6, 102);
     // string_to_char(temp2.getName(), ptr);

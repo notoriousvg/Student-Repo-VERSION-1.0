@@ -14,11 +14,12 @@ void Professor::addCourse(const Course& c)
 }
 bool Professor::foundCourse(const Course& c, int& i)
 {
-    for (i; i < numOfCourses; i++)
+    for (int i; i < numOfCourses; i++)
     {
         if (coursesLectured[i] == c)
             return true;
     }
+    return false;
 }
 void Professor::removeCourse(const Course& c)
 {

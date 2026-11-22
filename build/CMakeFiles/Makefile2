@@ -185,12 +185,12 @@ libs/student/clean: libs/student/CMakeFiles/Student.dir/clean
 # Target rules for target CMakeFiles/StudentRepo.dir
 
 # All Build rule for target.
-CMakeFiles/StudentRepo.dir/all: libs/mylib/CMakeFiles/MyLib.dir/all
-CMakeFiles/StudentRepo.dir/all: libs/student/CMakeFiles/Student.dir/all
 CMakeFiles/StudentRepo.dir/all: libs/course/CMakeFiles/Course.dir/all
 CMakeFiles/StudentRepo.dir/all: libs/dept/CMakeFiles/Dept.dir/all
 CMakeFiles/StudentRepo.dir/all: libs/professor/CMakeFiles/Professor.dir/all
 CMakeFiles/StudentRepo.dir/all: libs/college/CMakeFiles/College.dir/all
+CMakeFiles/StudentRepo.dir/all: libs/mylib/CMakeFiles/MyLib.dir/all
+CMakeFiles/StudentRepo.dir/all: libs/student/CMakeFiles/Student.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/StudentRepo.dir/build.make CMakeFiles/StudentRepo.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/StudentRepo.dir/build.make CMakeFiles/StudentRepo.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/victorgarcia/Documents/IDK/StudentRepo/build/CMakeFiles --progress-num=13,14 "Built target StudentRepo"

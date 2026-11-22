@@ -68,9 +68,9 @@ void Student::update(const float& f)
 {
     _gpa = f;
 }
-std::string Student::concatRecord()
+std::string Student::concatRecord(const int num)
 {
-    std::string _s = _studentName + " " + _major + " " +  _minor + " " +
+    std::string _s = std::to_string(num) + " " + _studentName + " " + _major + " " +  _minor + " " +
                     _gradLevel + " " + std::to_string(_gpa) + " " + 
                     std::to_string(_id); 
 
